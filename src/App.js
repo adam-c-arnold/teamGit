@@ -9,14 +9,21 @@ class App extends Component {
     super(props);
     this.state = { 
       latitude: null,
-      longitude: null,
-    }
+      longitude: null
+    };
   }
+
+  componentWillMount() {
+    console.log('About to Mount.');
+}
+
   componentDidMount() {
+    let location = this;
     navigator.geolocation.getCurrentPosition(function (position) {
-      console.log("latititude is:", position.coords.latitude);
-      console.log("longititude is:", position.coords.longitude);
-      this.setState ({
+      console.log("latitude is:", position.coords.latitude);
+      console.log("longitude is:", position.coords.longitude);
+
+      location.setState ({
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
       })
@@ -29,8 +36,8 @@ class App extends Component {
           <h1>Based on your location, here is some vital information for you!</h1>
         </header>
         <Nasa latitude={this.state.latitude} longitude={this.state.longitude} />
-        <OpenWeather latitude={this.state.latitude} longitude={this.state.longitude} />
-        <Zomato latitude={this.state.latitude} longitude={this.state.longitude} />
+        {/* <OpenWeather latitude={this.state.latitude} longitude={this.state.longitude} />
+        <Zomato latitude={this.state.latitude} longitude={this.state.longitude} /> */}
       </div>
     );
   }
