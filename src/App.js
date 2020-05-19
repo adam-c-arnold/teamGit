@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Nasa from "./Nasa";
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Header</h1>
+          <Nasa />
         </header>
       </div>
     );
