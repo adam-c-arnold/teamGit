@@ -15,15 +15,37 @@ class App extends Component {
 
   componentDidMount() {
     let location = this;
+    
+    // Get the longitude & latitude for the other API calls.
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("latitude is:", position.coords.latitude);
       console.log("longitude is:", position.coords.longitude);
-
       location.setState ({
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
       });
-    });
+      console.log('**' + position.coords.latitude);
+      console.log(location);
+
+      
+
+
+
+    });  // End of navigator.geolocation.getCurrentPosition
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
   }
   render() {
     return (
@@ -34,8 +56,6 @@ class App extends Component {
           </h1>
         </header>
         <Nasa latitude={this.state.latitude} longitude={this.state.longitude} />
-        {/* <OpenWeather latitude={this.state.latitude} longitude={this.state.longitude} /> */}
-        {/* <Zomato latitude={this.state.latitude} longitude={this.state.longitude} /> */}
         {/* <OpenWeather latitude={this.state.latitude} longitude={this.state.longitude} />
         <Zomato latitude={this.state.latitude} longitude={this.state.longitude} /> */}
       </div>
