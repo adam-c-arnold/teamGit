@@ -1,4 +1,5 @@
 import React from "react";
+import MainCard from "./MainCard";
 
 const Nasa = (props) => {
   //   console.log(props);
@@ -14,8 +15,8 @@ const Nasa = (props) => {
 
   return (
     <div>
-      <h3 onLoad={fetchAPI}>Nasa component</h3>
-      <img src={url} />
+      <h3>Nasa component</h3>
+      <MainCard media={url} />
     </div>
   );
 };
