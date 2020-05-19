@@ -16,9 +16,10 @@ class App extends Component {
   componentDidMount() {
     let location = this;
     navigator.geolocation.getCurrentPosition(function (position) {
-      console.log("latititude is:", position.coords.latitude);
-      console.log("longititude is:", position.coords.longitude);
-      location.setState({
+      console.log("latitude is:", position.coords.latitude);
+      console.log("longitude is:", position.coords.longitude);
+
+      location.setState ({
         latitude: position.coords.latitude,
         longitude: position.coords.longitude,
       });
@@ -35,6 +36,8 @@ class App extends Component {
         <Nasa latitude={this.state.latitude} longitude={this.state.longitude} />
         {/* <OpenWeather latitude={this.state.latitude} longitude={this.state.longitude} /> */}
         {/* <Zomato latitude={this.state.latitude} longitude={this.state.longitude} /> */}
+        {/* <OpenWeather latitude={this.state.latitude} longitude={this.state.longitude} />
+        <Zomato latitude={this.state.latitude} longitude={this.state.longitude} /> */}
       </div>
     );
   }
