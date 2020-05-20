@@ -41,6 +41,13 @@ export default function OpenWeather(props) {
     // this.setState ({fahr: !fahr})
   };
 
+  // Temperature Variables
+
+  let fTemp = (temp - 273) * 1.8 + 32;
+  let fTempFixed = fTemp.toFixed(2);
+  let cTemp = temp - 273;
+  let cTempFixed = cTemp.toFixed(2);
+
   return (
     <div>
       <h2>Your Weather</h2>
@@ -55,12 +62,12 @@ export default function OpenWeather(props) {
             {fahr ? (
               <Typography variant="body2" color="textSecondary" component="p">
                 {/* Fahrenheit */}
-                Current Temperature: {(temp - 273) * 1.8 + 32} F
+                Current Temperature: {fTempFixed} F
               </Typography>
             ) : (
               <Typography variant="body2" color="textSecondary" component="p">
                 {/* Celcius */}
-                Current Temperature: {temp - 273} C
+                Current Temperature: {cTempFixed} C
               </Typography>
             )}
           </CardContent>
