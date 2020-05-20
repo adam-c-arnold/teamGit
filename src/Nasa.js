@@ -2,7 +2,6 @@ import React from "react";
 import MainCard from "./MainCard";
 
 const Nasa = (props) => {
-  console.log(props);
   let lon = props.longitude;
   let lat = props.latitude;
   let today = new Date();
