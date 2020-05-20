@@ -41,8 +41,6 @@ export default function Zomato(props) {
       </CardActionArea>
     </Card>
     <Divider width={345}/>
-    <Divider width={345}/>
-    <Divider width={345}/>
     <Card className={classes.root}>
       <CardActionArea>
         {zomatoRest2PhotosURL ?
