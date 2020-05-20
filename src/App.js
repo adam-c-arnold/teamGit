@@ -16,9 +16,15 @@ class App extends Component {
       zomatoRest2PhotosURL: null,
       zomatoRest3Name: null,
       zomatoRest3PhotosURL: null,
-      weatherData: null,
+      weatherDescription: null,
+      weatherTemp: null,
+      // fahr: true,
     };
   }
+
+  // handleClick = () => {
+  //   this.setState({fahr: !fahr})
+  // }
 
   componentDidMount() {
     let location = this;
@@ -90,7 +96,8 @@ class App extends Component {
           console.log('Weather Data');
           console.log(data);
           wData.setState ({
-            weatherData: data,
+            weatherDescription: data.weather[0].description,
+            weatherTemp: data.main.temp
           });
         });
 
@@ -108,7 +115,7 @@ class App extends Component {
           </h1>
         </header>
         <Nasa latitude={this.state.latitude} longitude={this.state.longitude} />
-        <OpenWeather weather={this.state.weatherData} />
+        <OpenWeather weatherDescription={this.state.weatherDescription} temp={this.state.weatherTemp} />
         <Zomato zomatoRest1Name={this.state.zomatoRest1Name} zomatoRest2Name={this.state.zomatoRest2Name} zomatoRest3Name={this.state.zomatoRest3Name} zomatoRest1PhotosURL={this.state.zomatoRest1PhotosURL} zomatoRest2PhotosURL={this.state.zomatoRest2PhotosURL} zomatoRest3PhotosURL={this.state.zomatoRest3PhotosURL} />
       </div>
     );
