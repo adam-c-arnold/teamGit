@@ -19,13 +19,8 @@ class App extends Component {
       zomatoRest3PhotosURL: null,
       weatherDescription: null,
       weatherTemp: null,
-      // fahr: true,
     };
   }
-
-  // handleClick = () => {
-  //   this.setState({fahr: !fahr})
-  // }
 
   componentDidMount() {
     let location = this;
