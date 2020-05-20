@@ -15,31 +15,15 @@ const useStyles = makeStyles({
   },
 });
 
-export default function OpenWeather(props) {
-  const { temp } = props;
-  const { weatherDescription } = props;
-  // const { fahr } = props;
-  // const { handleClick } = props;
-  const [fahr, setFahr] = useState(true);
-  // const [fahr, setFahr] = useState(true);
-  // this.state = {
-  //     fahr: true
-  // }
+  export default function OpenWeather(props) {
+    const { temp } = props;
+    const { weatherDescription } = props;
+    const [fahr, setFahr] = useState(true);
+    const classes = useStyles();
 
-  // const { fahr } = props;
-  // var fahr = true;
-  // console.log(fahr)
-  const classes = useStyles();
-
-  const handleClick = () => {
-    setFahr(!fahr);
-    // console.log(fahr);
-    // return !fahr;
-    // fahr = !fahr;
-    // console.log(fahr);
-    // return fahr;
-    // this.setState ({fahr: !fahr})
-  };
+    const handleClick = () => {
+        setFahr(!fahr);
+    }
 
   // Temperature Variables
 
@@ -52,8 +36,6 @@ export default function OpenWeather(props) {
     <div>
       <h2>Your Weather</h2>
       <Card className={classes.root}>
-        {/* <CardActionArea> */}
-        {/* <CardActionArea onClick={(fahr) => handleClick(fahr)}> */}
         <CardActionArea onClick={() => setFahr(!fahr)}>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
@@ -61,12 +43,10 @@ export default function OpenWeather(props) {
             </Typography>
             {fahr ? (
               <Typography variant="body2" color="textSecondary" component="p">
-                {/* Fahrenheit */}
                 Current Temperature: {fTempFixed} F
               </Typography>
             ) : (
               <Typography variant="body2" color="textSecondary" component="p">
-                {/* Celcius */}
                 Current Temperature: {cTempFixed} C
               </Typography>
             )}
