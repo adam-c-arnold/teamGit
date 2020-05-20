@@ -25,7 +25,7 @@ export default function Zomato(props) {
   return (
       <div>
           <h2>Restaurants Near You</h2>
-    <Card className={classes.root}>
+    <Card className={classes.root} justifyContent="center">
     <CardActionArea>
         {zomatoRest1PhotosURL ?
         <CardMedia
@@ -40,7 +40,9 @@ export default function Zomato(props) {
         </CardContent>
       </CardActionArea>
     </Card>
-    <Divider />
+    <Divider width={345}/>
+    <Divider width={345}/>
+    <Divider width={345}/>
     <Card className={classes.root}>
       <CardActionArea>
         {zomatoRest2PhotosURL ?
@@ -56,7 +58,9 @@ export default function Zomato(props) {
         </CardContent>
       </CardActionArea>
     </Card>
-    <Divider />
+    <Divider width={345}/>
+    <Divider width={345}/>
+    <Divider width={345}/>
     <Card className={classes.root}>
         <CardActionArea>
             {zomatoRest3PhotosURL ?
