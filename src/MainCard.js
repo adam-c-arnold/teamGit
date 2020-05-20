@@ -5,13 +5,15 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-
+import HUE from "@material-ui/core/colors/lightBlue";
+const colorBlue = HUE[100];
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    backgroundColor: colorBlue,
   },
   media: {
-    height: 140,
+    height: 150,
   },
 });
 
@@ -31,7 +33,7 @@ export default function MainCard(props) {
             Location
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Satellite of current location
+            <strong>Satellite of current location</strong>
           </Typography>
         </CardContent>
       </CardActionArea>
