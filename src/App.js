@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import "./App.css";
 import Nasa from "./Nasa";
 import OpenWeather from "./OpenWeather";
 import Zomato from "./Zomato";
@@ -18,13 +17,8 @@ class App extends Component {
       zomatoRest3PhotosURL: null,
       weatherDescription: null,
       weatherTemp: null,
-      // fahr: true,
     };
   }
-
-  // handleClick = () => {
-  //   this.setState({fahr: !fahr})
-  // }
 
   componentDidMount() {
     let location = this;
