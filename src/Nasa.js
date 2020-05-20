@@ -15,7 +15,7 @@ const Nasa = (props) => {
 
   return (
     <div>
-      <h3>Nasa component</h3>
+      <h2>Satellite Image Near You</h2>
       <MainCard media={url} />
     </div>
   );
