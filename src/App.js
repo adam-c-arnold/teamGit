@@ -88,7 +88,7 @@ class App extends Component {
             Based on your location, here is some vital information for you!
           </h1>
         </header>
-        {/* {/* <Nasa latitude={this.state.latitude} longitude={this.state.longitude} /> */}
+        <Nasa latitude={this.state.latitude} longitude={this.state.longitude} />
         <OpenWeather weather={this.state.weatherData} />
         <Zomato
         zomatoRest1Name={this.state.zomatoRest1Name} zomatoRest2Name={this.state.zomatoRest2Name} zomatoRest3Name={this.state.zomatoRest3Name}
